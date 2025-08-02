@@ -1,10 +1,7 @@
 package org.capsc.pdf.template.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.capsc.pdf.common.entity.BaseTimeEntity;
 
 import java.util.UUID;
@@ -12,6 +9,7 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "templates")
@@ -29,6 +27,7 @@ public class Template extends BaseTimeEntity {
     private Boolean isPublic;
     private String pdfFilePath;
     private String pdfImagePath;
+    private String pdfImageUrl;
     private UUID userid;
 }
 
