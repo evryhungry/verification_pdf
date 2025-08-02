@@ -169,5 +169,5 @@ gradle-app.setting
 /gradlew
 /gradlew.bat
 
-
+/src/main/resources
 # End of https://www.toptal.com/developers/gitignore/api/gradle,intellij+all,macos,maven
