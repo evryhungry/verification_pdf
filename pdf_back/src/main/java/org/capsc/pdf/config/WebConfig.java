@@ -12,6 +12,9 @@ public class WebConfig implements WebMvcConfigurer {
     @Value("${file.upload.image-path}")
     private String uploadImagePath;
 
+    @Value("${file.upload.pdf-path}")
+    private String uploadPdfPath;
+
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
@@ -24,5 +27,9 @@ public class WebConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/static/image/**")
                 .addResourceLocations("file:" + uploadImagePath);
+
+        registry.addResourceHandler("/static/pdf/**")
+                .addResourceLocations("file:" + uploadPdfPath);
+
     }
 }
